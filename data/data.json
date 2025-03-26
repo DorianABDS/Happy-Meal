@@ -1,0 +1,1013 @@
+{
+   "recettes": [
+      {
+         "nom": "Poulet rôti aux herbes",
+         "categorie": "Plat principal",
+         "temps_preparation": "1 heure",
+         "ingredients": [
+            {
+               "nom": "Poulet",
+               "quantite": "1"
+            },
+            {
+               "nom": "Herbes fraîches",
+               "quantite": "1"
+            },
+            {
+               "nom": "Sel et poivre",
+               "quantite": "10g"
+            },
+            {
+               "nom": "Huile d'olive",
+               "quantite": "10g"
+            }
+         ],
+         "etapes": [
+            "Préchauffez le four à 200°C.",
+            "Nettoyez le poulet et assaisonnez-le généreusement avec du sel, du poivre et les herbes.",
+            "Badigeonnez le poulet d'huile d'olive.",
+            "Placez le poulet dans un plat allant au four et enfournez-le pendant environ 1 heure ou jusqu'à ce qu'il soit bien doré et cuit à cœur.",
+            "Laissez reposer quelques minutes avant de découper et de servir."
+         ]
+      },
+      {
+         "nom": "Salade de quinoa aux légumes grillés",
+         "categorie": "Entrée",
+         "temps_preparation": "30 minutes",
+         "ingredients": [
+            {
+               "nom": "quinoa",
+               "quantite": "200g"
+            },
+            {
+               "nom": "Poivron",
+               "quantite": "3"
+            },
+            {
+               "nom": "Sel et poivre",
+               "quantite": "10g"
+            },
+            {
+               "nom": "Huile d'olive",
+               "quantite": "10g"
+            },
+            {
+               "nom": "Jus de citron",
+               "quantite": "10g"
+            },
+            {
+               "nom": "Huile d'olive",
+               "quantite": "10g"
+            }
+         ],
+         "etapes": [
+            "Cuire le quinoa selon les instructions sur l'emballage.",
+            "Coupez les légumes en morceaux et faites-les griller avec un filet d'huile d'olive jusqu'à ce qu'ils soient tendres et légèrement dorés.",
+            "Dans un grand bol, mélangez le quinoa cuit avec les légumes grillés.",
+            "Assaisonnez avec du jus de citron, du sel, du poivre et des feuilles de basilic frais.",
+            "Servez la salade de quinoa aux légumes grillés, chaude ou froide."
+         ]
+      },
+      {
+         "nom": "Tarte aux pommes",
+         "categorie": "Dessert",
+         "temps_preparation": "1 heure",
+         "ingredients": [
+            {
+               "nom": "Pâte brisée",
+               "quantite": "1"
+            },
+            {
+               "nom": "Pomme",
+               "quantite": "3"
+            },
+            {
+               "nom": "Sucre",
+               "quantite": "50g"
+            },
+            {
+               "nom": "Canelle",
+               "quantite": "10g"
+            },
+            {
+               "nom": "Beurre",
+               "quantite": "10g"
+            },
+            {
+               "nom": "Huile d'olive",
+               "quantite": "10g"
+            }
+         ],
+         "etapes": [
+            "Préchauffez le four à 180°C.",
+            "Étalez la pâte brisée dans un moule à tarte.",
+            "Pelez, épépinez et coupez les pommes en tranches.",
+            "Disposez les tranches de pommes sur la pâte en les faisant légèrement chevaucher.",
+            "Saupoudrez de sucre et de cannelle selon votre goût, puis parsemez de petits morceaux de beurre.",
+            "Enfournez la tarte pendant environ 40 à 45 minutes, jusqu'à ce qu'elle soit dorée.",
+            "Laissez refroidir avant de déguster."
+         ]
+      },
+      {
+         "nom": "Soupe de lentilles",
+         "categorie": "Entrée",
+         "temps_preparation": "1 heure",
+         "ingredients": [
+            {
+               "nom": "Lentille",
+               "quantite": "250g"
+            },
+            {
+               "nom": "Oignon",
+               "quantite": "3"
+            },
+            {
+               "nom": "Carottes",
+               "quantite": "50g"
+            },
+            {
+               "nom": "Celeri",
+               "quantite": "10g"
+            },
+            {
+               "nom": "Beurre",
+               "quantite": "10g"
+            },
+            {
+               "nom": "Huile d'olive",
+               "quantite": "10g"
+            }
+         ],
+         "etapes": [
+            "Dans une casserole, faites chauffer un peu d'huile d'olive.",
+            "Faites revenir l'oignon haché, l'ail émincé, les carottes et le céleri coupés en dés pendant quelques minutes.",
+            "Ajoutez les lentilles et mélangez bien.",
+            "Versez le bouillon de légumes dans la casserole et portez à ébullition.",
+            "Réduisez le feu et laissez mijoter pendant environ 40 minutes, jusqu'à ce que les lentilles soient tendres.",
+            "Assaisonnez avec du sel et du poivre selon votre goût.",
+            "Servez chaud, garni de feuilles de coriandre fraîche."
+         ]
+      },
+      {
+         "nom": "Pâtes Carbonara",
+         "categorie": "Plat principal",
+         "temps_preparation": "20 minutes",
+         "ingredients": [
+            {
+               "nom": "Pates",
+               "quantite": "500g"
+            },
+            {
+               "nom": "Lardon",
+               "quantite": "300g"
+            },
+            {
+               "nom": "Oeuf",
+               "quantite": "3"
+            },
+            {
+               "nom": "Parmesan",
+               "quantite": "50g"
+            },
+            {
+               "nom": "Beurre",
+               "quantite": "10g"
+            },
+            {
+               "nom": "Huile d'olive",
+               "quantite": "10g"
+            }
+         ],
+         "etapes": [
+            "Faites cuire les pâtes dans une grande casserole d'eau bouillante salée selon les instructions sur l'emballage jusqu'à ce qu'elles soient al dente.",
+            "Pendant ce temps, faites chauffer un peu d'huile d'olive dans une poêle et faites revenir la pancetta ou les lardons jusqu'à ce qu'ils soient croustillants.",
+            "Dans un bol, fouettez les jaunes d'œufs avec le Parmesan râpé et du poivre noir moulu.",
+            "Égouttez les pâtes, en réservant une petite quantité d'eau de cuisson.",
+            "Mélangez rapidement les pâtes égouttées avec les lardons dans la poêle chaude.",
+            "Retirez la poêle du feu, puis ajoutez le mélange d'œufs et de fromage aux pâtes, en remuant rapidement pour éviter que les œufs ne cuisent trop et ne deviennent des morceaux.",
+            "Si la sauce est trop épaisse, ajoutez un peu d'eau de cuisson réservée pour la diluer.",
+            "Servez immédiatement, garni de plus de Parmesan râpé et de poivre noir moulu, si désiré."
+         ]
+      },
+      {
+         "nom": "Risotto aux champignons",
+         "categorie": "Plat principal",
+         "temps_preparation": "40 minutes",
+         "ingredients": [
+            {
+               "nom": "Riz",
+               "quantite": "300g"
+            },
+            {
+               "nom": "Oigons",
+               "quantite": "3"
+            },
+            {
+               "nom": "Vin blanc",
+               "quantite": "50g"
+            },
+            {
+               "nom": "Parmesan",
+               "quantite": "50g"
+            },
+            {
+               "nom": "Beurre",
+               "quantite": "10g"
+            },
+            {
+               "nom": "Huile d'olive",
+               "quantite": "10g"
+            }
+         ],
+         "etapes": [
+            "Dans une grande poêle, faites chauffer l'huile d'olive à feu moyen.",
+            "Ajoutez l'oignon et faites-le revenir jusqu'à ce qu'il soit translucide.",
+            "Ajoutez les champignons et l'ail, puis faites-les cuire jusqu'à ce qu'ils soient tendres et dorés.",
+            "Ajoutez le riz dans la poêle et mélangez-le bien avec les champignons et l'oignon.",
+            "Versez le vin blanc dans la poêle et remuez jusqu'à ce qu'il soit absorbé par le riz.",
+            "Ajoutez une louche de bouillon chaud dans la poêle et remuez le riz jusqu'à ce que le liquide soit absorbé.",
+            "Répétez cette étape en ajoutant une louche de bouillon à la fois et en remuant constamment jusqu'à ce que le riz soit cuit al dente et crémeux.",
+            "Retirez la poêle du feu et incorporez le parmesan râpé.",
+            "Assaisonnez avec du sel et du poivre selon votre goût.",
+            "Servez le risotto chaud, garni de persil frais haché."
+         ]
+      },
+      {
+         "nom": "Ratatouille provençale",
+         "categorie": "Plat principal",
+         "temps_preparation": "1 heure",
+         "ingredients": [
+            {
+               "nom": "Aubergine",
+               "quantite": "1"
+            },
+            {
+               "nom": "Courgette",
+               "quantite": "3"
+            },
+            {
+               "nom": "Poivron",
+               "quantite": "2"
+            },
+            {
+               "nom": "Tomate",
+               "quantite": "4"
+            },
+            {
+               "nom": "Oignon",
+               "quantite": "2"
+            },
+            {
+               "nom": "Huile d'olive",
+               "quantite": "10g"
+            }
+         ],
+         "etapes": [
+            "Coupez tous les légumes en dés de taille moyenne.",
+            "Dans une grande poêle, faites chauffer l'huile d'olive à feu moyen.",
+            "Ajoutez les oignons et l'ail hachés, puis faites-les revenir jusqu'à ce qu'ils soient translucides.",
+            "Ajoutez les poivrons et faites-les revenir pendant quelques minutes.",
+            "Incorporez l'aubergine et la courgette, puis faites-les cuire jusqu'à ce qu'ils soient tendres.",
+            "Ajoutez les tomates et les herbes de Provence, puis laissez mijoter la ratatouille pendant environ 20 à 30 minutes, en remuant de temps en temps.",
+            "Assaisonnez avec du sel et du poivre selon votre goût.",
+            "Servez la ratatouille chaude ou à température ambiante, accompagnée de pain frais ou de riz."
+         ]
+      },
+      {
+         "nom": "Salade César",
+         "categorie": "Entrée",
+         "temps_preparation": "20 minutes",
+         "ingredients": [
+            {
+               "nom": "Laitue",
+               "quantite": "1"
+            },
+            {
+               "nom": "Poulet",
+               "quantite": "1"
+            },
+            {
+               "nom": "Crouton",
+               "quantite": "50g"
+            },
+            {
+               "nom": "Parmesan",
+               "quantite": "50g"
+            },
+            {
+               "nom": "Beurre",
+               "quantite": "10g"
+            },
+            {
+               "nom": "Huile d'olive",
+               "quantite": "10g"
+            }
+         ],
+         "etapes": [
+            "Lavez et séchez la laitue romaine, puis déchirez-la en morceaux dans un grand bol.",
+            "Ajoutez le poulet grillé coupé en morceaux, les croûtons et le parmesan râpé.",
+            "Arrosez la salade de sauce César selon votre goût.",
+            "Saupoudrez de poivre noir moulu.",
+            "Mélangez délicatement pour enrober tous les ingrédients de sauce.",
+            "Servez immédiatement et dégustez."
+         ]
+      },
+      {
+         "nom": "Risotto aux champignons",
+         "categorie": "Plat principal",
+         "temps_preparation": "40 minutes",
+         "ingredients": [
+            {
+               "nom": "Riz",
+               "quantite": "100g"
+            },
+            {
+               "nom": "Champignons",
+               "quantite": "500g"
+            },
+            {
+               "nom": "Oignons",
+               "quantite": "3"
+            },
+            {
+               "nom": "Vin blanc",
+               "quantite": "50g"
+            },
+            {
+               "nom": "Beurre",
+               "quantite": "50g"
+            },
+            {
+               "nom": "Huile d'olive",
+               "quantite": "10g"
+            }
+         ],
+         "etapes": [
+            "Nettoyez et coupez les champignons en tranches.",
+            "Dans une grande poêle, faites chauffer un peu d'huile d'olive et faites revenir l'oignon haché et l'ail émincé jusqu'à ce qu'ils soient translucides.",
+            "Ajoutez les champignons et faites-les sauter jusqu'à ce qu'ils soient dorés.",
+            "Ajoutez le riz Arborio et mélangez bien pour enrober chaque grain d'huile.",
+            "Versez le vin blanc et laissez-le s'évaporer.",
+            "Ajoutez une louche de bouillon de légumes chaud et remuez jusqu'à ce que le liquide soit absorbé.",
+            "Continuez à ajouter le bouillon louche par louche, en remuant fréquemment, jusqu'à ce que le riz soit crémeux et cuit al dente, cela prendra environ 18-20 minutes.",
+            "Incorporez le beurre et le Parmesan râpé.",
+            "Assaisonnez avec du sel et du poivre selon votre goût.",
+            "Saupoudrez de persil frais haché avant de servir."
+         ]
+      },
+      {
+         "nom": "Muffins aux myrtilles",
+         "categorie": "Dessert",
+         "temps_preparation": "30 minutes",
+         "ingredients": [
+            {
+               "nom": "Farine",
+               "quantite": "200g"
+            },
+            {
+               "nom": "Sucre",
+               "quantite": "100g"
+            },
+            {
+               "nom": "Levure",
+               "quantite": "1"
+            },
+            {
+               "nom": "Lait",
+               "quantite": "100g"
+            },
+            {
+               "nom": "Oeuf",
+               "quantite": "1"
+            },
+            {
+               "nom": "Mirtilles",
+               "quantite": "150g"
+            }
+         ],
+         "etapes": [
+            "Préchauffez votre four à 200°C et graissez légèrement un moule à muffins.",
+            "Dans un grand bol, mélangez la farine, le sucre, la levure chimique, le bicarbonate de soude et le sel.",
+            "Dans un autre bol, battez ensemble le lait, l'huile, l'œuf et l'extrait de vanille.",
+            "Incorporez les ingrédients liquides aux ingrédients secs et mélangez jusqu'à ce que la pâte soit homogène.",
+            "Délicatement, incorporez les myrtilles à la pâte.",
+            "Répartissez la pâte dans les moules à muffins, en les remplissant aux trois quarts.",
+            "Enfournez les muffins pendant environ 20 minutes ou jusqu'à ce qu'ils soient dorés et qu'un cure-dent inséré au centre en ressorte propre.",
+            "Laissez refroidir les muffins dans le moule pendant quelques minutes, puis transférez-les sur une grille pour les laisser refroidir complètement avant de déguster."
+         ]
+      },
+      {
+         "nom": "Lasagnes végétariennes",
+         "categorie": "Plat principal",
+         "temps_preparation": "1 heure 30 minutes",
+         "ingredients": [
+            {
+               "nom": "Pâte",
+               "quantite": "150g"
+            },
+            {
+               "nom": "Aubergine",
+               "quantite": "3"
+            },
+            {
+               "nom": "Courgette",
+               "quantite": "5"
+            },
+            {
+               "nom": "Poivon",
+               "quantite": "3"
+            },
+            {
+               "nom": "Beurre",
+               "quantite": "10g"
+            },
+            {
+               "nom": "Huile d'olive",
+               "quantite": "10g"
+            }
+         ],
+         "etapes": [
+            "Préchauffez votre four à 180°C.",
+            "Coupez les légumes en tranches fines, hachez l'ail et ciselez le basilic.",
+            "Dans une poêle, faites chauffer un peu d'huile d'olive et faites revenir les légumes avec l'ail jusqu'à ce qu'ils soient tendres.",
+            "Dans un plat à gratin, étalez une fine couche de sauce tomate, puis disposez une couche de feuilles de lasagnes.",
+            "Ajoutez une couche de légumes cuits, une couche de ricotta, et saupoudrez de mozzarella râpée et de parmesan.",
+            "Répétez les couches jusqu'à ce que tous les ingrédients soient utilisés, en terminant par une couche de sauce tomate et de fromage.",
+            "Couvrez le plat de papier aluminium et faites cuire au four pendant environ 45 minutes.",
+            "Retirez le papier aluminium et poursuivez la cuisson pendant encore 15 minutes, jusqu'à ce que le dessus soit doré et croustillant.",
+            "Laissez reposer quelques minutes avant de servir."
+         ]
+      },
+      {
+         "nom": "Salade niçoise",
+         "categorie": "Entrée",
+         "temps_preparation": "20 minutes",
+         "ingredients": [
+            {
+               "nom": "Laitue",
+               "quantite": "1"
+            },
+            {
+               "nom": "Thon",
+               "quantite": "3"
+            },
+            {
+               "nom": "Oeuf",
+               "quantite": "3"
+            },
+            {
+               "nom": "Tomates",
+               "quantite": "4"
+            },
+            {
+               "nom": "Poivron",
+               "quantite": "4"
+            },
+            {
+               "nom": "Haricot verts",
+               "quantite": "400g"
+            },
+            {
+               "nom": "Huile d'olive",
+               "quantite": "10g"
+            }
+         ],
+         "etapes": [
+            "Lavez et essorez la laitue, puis disposez-la dans un grand saladier.",
+            "Disposez les ingrédients suivants sur la laitue, en les disposant de manière décorative : les tomates coupées en quartiers, les œufs durs coupés en deux, les olives noires, les poivrons rouges en lamelles, les oignons rouges émincés, les haricots verts cuits et les filets d'anchois.",
+            "Émiettez le thon en boîte et répartissez-le sur la salade.",
+            "Dans un petit bol, préparez la vinaigrette en mélangeant de l'huile d'olive, du vinaigre de vin rouge, du sel et du poivre.",
+            "Versez la vinaigrette sur la salade juste avant de servir et mélangez légèrement pour enrober tous les ingrédients.",
+            "Servez immédiatement."
+         ]
+      },
+      {
+         "nom": "Tiramisu",
+         "categorie": "Dessert",
+         "temps_preparation": "30 minutes (+ temps de repos)",
+         "ingredients": [
+            {
+               "nom": "Mascarpone",
+               "quantite": "250"
+            },
+            {
+               "nom": "Oeuf",
+               "quantite": "3"
+            },
+            {
+               "nom": "Sucre",
+               "quantite": "80g"
+            },
+            {
+               "nom": "Vanille",
+               "quantite": "1"
+            },
+            {
+               "nom": "Café",
+               "quantite": "10g"
+            },
+            {
+               "nom": "Cacao",
+               "quantite": "10g"
+            }
+         ],
+         "etapes": [
+            "Séparez les blancs des jaunes d'œufs.",
+            "Dans un grand bol, fouettez les jaunes d'œufs avec le sucre jusqu'à ce que le mélange blanchisse.",
+            "Ajoutez le mascarpone et l'extrait de vanille, puis mélangez jusqu'à obtenir une crème lisse et homogène.",
+            "Dans un autre bol, montez les blancs d'œufs en neige ferme.",
+            "Incorporez délicatement les blancs montés en neige à la préparation au mascarpone.",
+            "Trempez rapidement les biscuits à la cuillère dans le café fort et disposez-les au fond d'un plat.",
+            "Recouvrez les biscuits d'une couche de crème au mascarpone.",
+            "Répétez les couches de biscuits trempés dans le café et de crème au mascarpone jusqu'à épuisement des ingrédients, en terminant par une couche de crème.",
+            "Saupoudrez généreusement de cacao en poudre sur le dessus du tiramisu.",
+            "Couvrez le plat et laissez reposer au réfrigérateur pendant au moins 4 heures, idéalement toute une nuit, avant de servir."
+         ]
+      },
+      {
+         "nom": "Omelette aux champignons",
+         "categorie": "Plat principal",
+         "temps_preparation": "15 minutes",
+         "ingredients": [
+            {
+               "nom": "Œufs",
+               "quantite": "3"
+            },
+            {
+               "nom": "Champignons",
+               "quantite": "150g"
+            },
+            {
+               "nom": "Beurre",
+               "quantite": "10g"
+            },
+            {
+               "nom": "Sel et poivre",
+               "quantite": "au goût"
+            },
+            {
+               "nom": "Persil",
+               "quantite": "facultatif"
+            }
+         ],
+         "etapes": [
+            "Lavez et émincez les champignons.",
+            "Faites chauffer une poêle avec le beurre et faites revenir les champignons pendant 5 minutes.",
+            "Dans un bol, battez les œufs avec du sel et du poivre.",
+            "Versez les œufs battus sur les champignons et laissez cuire à feu doux.",
+            "Pliez l’omelette en deux et servez avec du persil haché."
+         ]
+      },
+      {
+         "nom": "Smoothie banane-fraise",
+         "categorie": "Boisson",
+         "temps_preparation": "5 minutes",
+         "ingredients": [
+            {
+               "nom": "Banane",
+               "quantite": "1"
+            },
+            {
+               "nom": "Fraises",
+               "quantite": "100g"
+            },
+            {
+               "nom": "Lait",
+               "quantite": "200ml"
+            },
+            {
+               "nom": "Miel",
+               "quantite": "1 cuillère à soupe (facultatif)"
+            }
+         ],
+         "etapes": [
+            "Coupez la banane en rondelles et lavez les fraises.",
+            "Mettez tous les ingrédients dans un mixeur.",
+            "Mixez jusqu'à obtenir une texture lisse.",
+            "Servez bien frais."
+         ]
+      },
+      {
+         "nom": "Gâteau au chocolat fondant",
+         "categorie": "Dessert",
+         "temps_preparation": "40 minutes",
+         "ingredients": [
+            {
+               "nom": "Chocolat noir",
+               "quantite": "200g"
+            },
+            {
+               "nom": "Beurre",
+               "quantite": "100g"
+            },
+            {
+               "nom": "Sucre",
+               "quantite": "100g"
+            },
+            {
+               "nom": "Œufs",
+               "quantite": "4"
+            },
+            {
+               "nom": "Farine",
+               "quantite": "50g"
+            }
+         ],
+         "etapes": [
+            "Préchauffez le four à 180°C.",
+            "Faites fondre le chocolat avec le beurre.",
+            "Ajoutez le sucre, puis les œufs un par un en mélangeant bien.",
+            "Incorporez la farine et mélangez.",
+            "Versez la pâte dans un moule et enfournez 20 minutes.",
+            "Laissez refroidir avant de déguster."
+         ]
+      },
+      {
+         "nom": "Velouté de potiron",
+         "categorie": "Entrée",
+         "temps_preparation": "40 minutes",
+         "ingredients": [
+            {
+               "nom": "Potiron",
+               "quantite": "500g"
+            },
+            {
+               "nom": "Oignon",
+               "quantite": "1"
+            },
+            {
+               "nom": "Crème fraîche",
+               "quantite": "100ml"
+            },
+            {
+               "nom": "Bouillon de légumes",
+               "quantite": "500ml"
+            },
+            {
+               "nom": "Sel et poivre",
+               "quantite": "au goût"
+            }
+         ],
+         "etapes": [
+            "Épluchez et coupez le potiron en morceaux.",
+            "Faites revenir l’oignon émincé dans une casserole.",
+            "Ajoutez le potiron et le bouillon, puis laissez mijoter 30 minutes.",
+            "Mixez et ajoutez la crème fraîche.",
+            "Assaisonnez et servez chaud."
+         ]
+      },
+      {
+         "nom": "Bruschetta à la tomate et au basilic",
+         "categorie": "Entrée",
+         "temps_preparation": "15 minutes",
+         "ingredients": [
+            {
+               "nom": "Pain",
+               "quantite": "4 tranches"
+            },
+            {
+               "nom": "Tomates",
+               "quantite": "2"
+            },
+            {
+               "nom": "Ail",
+               "quantite": "1 gousse"
+            },
+            {
+               "nom": "Huile d'olive",
+               "quantite": "10ml"
+            },
+            {
+               "nom": "Basilic frais",
+               "quantite": "quelques feuilles"
+            },
+            {
+               "nom": "Sel et poivre",
+               "quantite": "au goût"
+            }
+         ],
+         "etapes": [
+            "Faites griller les tranches de pain.",
+            "Frottez-les avec la gousse d’ail.",
+            "Coupez les tomates en dés et mélangez-les avec l’huile d’olive, le sel et le poivre.",
+            "Déposez le mélange sur le pain et ajoutez du basilic."
+         ]
+      },
+      {
+         "nom": "Salade de chèvre chaud",
+         "categorie": "Entrée",
+         "temps_preparation": "20 minutes",
+         "ingredients": [
+            {
+               "nom": "Salade verte",
+               "quantite": "1"
+            },
+            {
+               "nom": "Fromage de chèvre",
+               "quantite": "4 tranches"
+            },
+            {
+               "nom": "Miel",
+               "quantite": "10ml"
+            },
+            {
+               "nom": "Noix",
+               "quantite": "50g"
+            },
+            {
+               "nom": "Pain",
+               "quantite": "4 tranches"
+            }
+         ],
+         "etapes": [
+            "Disposez la salade dans un bol.",
+            "Déposez les tranches de chèvre sur le pain et faites-les griller.",
+            "Ajoutez-les sur la salade avec un filet de miel et des noix."
+         ]
+      },
+      {
+         "nom": "Blanquette de veau",
+         "categorie": "Plat principal",
+         "temps_preparation": "2 heures",
+         "ingredients": [
+            {
+               "nom": "Veau",
+               "quantite": "500g"
+            },
+            {
+               "nom": "Carottes",
+               "quantite": "3"
+            },
+            {
+               "nom": "Champignons",
+               "quantite": "200g"
+            },
+            {
+               "nom": "Bouillon de volaille",
+               "quantite": "500ml"
+            },
+            {
+               "nom": "Crème fraîche",
+               "quantite": "100ml"
+            }
+         ],
+         "etapes": [
+            "Faites revenir la viande dans une cocotte.",
+            "Ajoutez les légumes et le bouillon, puis laissez mijoter 1h30.",
+            "Ajoutez la crème en fin de cuisson et servez chaud."
+         ]
+      },
+      {
+         "nom": "Tajine d'agneau aux pruneaux",
+         "categorie": "Plat principal",
+         "temps_preparation": "1 heure 30 minutes",
+         "ingredients": [
+            {
+               "nom": "Agneau",
+               "quantite": "500g"
+            },
+            {
+               "nom": "Pruneaux",
+               "quantite": "200g"
+            },
+            {
+               "nom": "Amandes",
+               "quantite": "50g"
+            },
+            {
+               "nom": "Oignon",
+               "quantite": "2"
+            },
+            {
+               "nom": "Miel",
+               "quantite": "2 cuillères à soupe"
+            },
+            {
+               "nom": "Épices à tajine",
+               "quantite": "1 cuillère à café"
+            }
+         ],
+         "etapes": [
+            "Faites revenir l’agneau avec les oignons.",
+            "Ajoutez les épices et de l’eau, laissez mijoter 1 heure.",
+            "Ajoutez les pruneaux et le miel, laissez cuire encore 30 minutes.",
+            "Ajoutez les amandes grillées avant de servir."
+         ]
+      },
+      {
+         "nom": "Tarte citron meringuée",
+         "categorie": "Dessert",
+         "temps_preparation": "1 heure",
+         "ingredients": [
+            {
+               "nom": "Pâte sablée",
+               "quantite": "1"
+            },
+            {
+               "nom": "Citrons",
+               "quantite": "2"
+            },
+            {
+               "nom": "Œufs",
+               "quantite": "3"
+            },
+            {
+               "nom": "Sucre",
+               "quantite": "100g"
+            },
+            {
+               "nom": "Beurre",
+               "quantite": "50g"
+            }
+         ],
+         "etapes": [
+            "Précuisez la pâte sablée.",
+            "Mélangez le jus de citron avec les œufs, le sucre et le beurre.",
+            "Versez sur la pâte et enfournez 20 minutes.",
+            "Ajoutez une meringue et dorez légèrement au four."
+         ]
+      },
+      {
+         "nom": "Mousse au chocolat",
+         "categorie": "Dessert",
+         "temps_preparation": "30 minutes",
+         "ingredients": [
+            {
+               "nom": "Chocolat noir",
+               "quantite": "200g"
+            },
+            {
+               "nom": "Œufs",
+               "quantite": "4"
+            },
+            {
+               "nom": "Sucre",
+               "quantite": "50g"
+            },
+            {
+               "nom": "Beurre",
+               "quantite": "50g"
+            }
+         ],
+         "etapes": [
+            "Faites fondre le chocolat avec le beurre.",
+            "Ajoutez les jaunes d’œufs et le sucre.",
+            "Incorporez délicatement les blancs montés en neige.",
+            "Réservez au frais avant de déguster."
+         ]
+      },
+      {
+         "nom": "Carpaccio de tomates et mozzarella",
+         "categorie": "Entrée",
+         "temps_preparation": "10 minutes",
+         "ingredients": [
+            {
+               "nom": "Tomates",
+               "quantite": "3"
+            },
+            {
+               "nom": "Mozzarella",
+               "quantite": "1 boule"
+            },
+            {
+               "nom": "Basilic frais",
+               "quantite": "quelques feuilles"
+            },
+            {
+               "nom": "Huile d'olive",
+               "quantite": "10ml"
+            },
+            {
+               "nom": "Sel et poivre",
+               "quantite": "au goût"
+            }
+         ],
+         "etapes": [
+            "Coupez les tomates et la mozzarella en tranches fines.",
+            "Disposez-les en alternance sur une assiette.",
+            "Ajoutez les feuilles de basilic.",
+            "Assaisonnez avec l'huile d'olive, le sel et le poivre."
+         ]
+      },
+      {
+         "nom": "Œufs mimosa",
+         "categorie": "Entrée",
+         "temps_preparation": "15 minutes",
+         "ingredients": [
+            {
+               "nom": "Œufs",
+               "quantite": "4"
+            },
+            {
+               "nom": "Mayonnaise",
+               "quantite": "3 cuillères à soupe"
+            },
+            {
+               "nom": "Moutarde",
+               "quantite": "1 cuillère à café"
+            },
+            {
+               "nom": "Sel et poivre",
+               "quantite": "au goût"
+            }
+         ],
+         "etapes": [
+            "Faites cuire les œufs durs, écalez-les et coupez-les en deux.",
+            "Récupérez les jaunes et mélangez-les avec la mayonnaise et la moutarde.",
+            "Garnissez les blancs avec cette préparation et servez frais."
+         ]
+      },
+      {
+         "nom": "Spaghetti aux fruits de mer",
+         "categorie": "Plat principal",
+         "temps_preparation": "30 minutes",
+         "ingredients": [
+            {
+               "nom": "Spaghetti",
+               "quantite": "300g"
+            },
+            {
+               "nom": "Fruits de mer",
+               "quantite": "200g"
+            },
+            {
+               "nom": "Ail",
+               "quantite": "2 gousses"
+            },
+            {
+               "nom": "Tomates concassées",
+               "quantite": "200g"
+            },
+            {
+               "nom": "Huile d'olive",
+               "quantite": "3 cuillères à soupe"
+            }
+         ],
+         "etapes": [
+            "Faites cuire les spaghetti al dente.",
+            "Dans une poêle, faites revenir l'ail émincé avec l'huile d'olive.",
+            "Ajoutez les fruits de mer et laissez cuire quelques minutes.",
+            "Ajoutez les tomates concassées et laissez mijoter 10 minutes.",
+            "Mélangez les spaghetti avec la sauce et servez chaud."
+         ]
+      },
+      {
+         "nom": "Filet mignon de porc à la moutarde",
+         "categorie": "Plat principal",
+         "temps_preparation": "45 minutes",
+         "ingredients": [
+            {
+               "nom": "Filet mignon de porc",
+               "quantite": "500g"
+            },
+            {
+               "nom": "Moutarde",
+               "quantite": "3 cuillères à soupe"
+            },
+            {
+               "nom": "Crème fraîche",
+               "quantite": "100ml"
+            },
+            {
+               "nom": "Sel et poivre",
+               "quantite": "au goût"
+            }
+         ],
+         "etapes": [
+            "Préchauffez le four à 180°C.",
+            "Badigeonnez le filet mignon de moutarde et enfournez-le pendant 35 minutes.",
+            "Ajoutez la crème fraîche et laissez cuire encore 10 minutes.",
+            "Servez chaud avec un accompagnement de votre choix."
+         ]
+      },
+      {
+         "nom": "Moelleux aux amandes",
+         "categorie": "Dessert",
+         "temps_preparation": "30 minutes",
+         "ingredients": [
+            {
+               "nom": "Poudre d'amande",
+               "quantite": "200g"
+            },
+            {
+               "nom": "Sucre",
+               "quantite": "100g"
+            },
+            {
+               "nom": "Œufs",
+               "quantite": "3"
+            },
+            {
+               "nom": "Beurre fondu",
+               "quantite": "100g"
+            }
+         ],
+         "etapes": [
+            "Préchauffez le four à 180°C.",
+            "Mélangez tous les ingrédients jusqu'à obtenir une pâte homogène.",
+            "Versez dans un moule beurré et enfournez 20 minutes.",
+            "Laissez refroidir avant de déguster."
+         ]
+      }
+   ]
+}

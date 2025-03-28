@@ -18,3 +18,20 @@ if (localStorage.getItem('recettes')) {
       }
     });
   }
+
+function saveToLocalStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
+
+function getFromLocalStorage(key) {
+  return JSON.parse(localStorage.getItem(key));
+}
+
+$(document).ready(async () => {
+  try {
+    const recettes = await getRecettes();
+    displayRecettes(recettes);
+  } catch (error) {
+    console.error('Impossible de charger les recettes :', error)
+  }
+});

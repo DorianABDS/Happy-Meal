@@ -2,14 +2,32 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Happy Meal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificateur de Repas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/assets/styles/style.css">
 </head>
 
-<body>
+<body class="p-6 bg-gray-100">
+    <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg p-6">
+        <h1 class="text-3xl font-bold text-center text-indigo-800 mb-6">Planificateur de Repas - Mes Favoris</h1>
+
+        <div class="overflow-x-auto">
+            <table class="w-full border-collapse">
+                <thead>
+                    <tr class="bg-indigo-600 text-white">
+                        <th class="p-3 text-left font-semibold border border-indigo-500">Jour</th>
+                        <th class="p-3 text-center font-semibold border border-indigo-500">Matin</th>
+                        <th class="p-3 text-center font-semibold border border-indigo-500">Midi</th>
+                        <th class="p-3 text-center font-semibold border border-indigo-500">Soir</th>
+                    </tr>
+                </thead>
+                <tbody id="menu-table">
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 </body>
 

@@ -11,7 +11,7 @@ $(document).ready(function() {
 
             recettesAleatoires.forEach(function(recette) {
                 let recetteHTML = `
-                <div class="recette p-4 bg-white shadow rounded cursor-pointer">
+                <div class="recette w-full sm:w-72 md:w-80 lg:w-96 p-4 bg-white shadow cursor-pointer w-72 rounded">
                     <img src="${recette.image}" alt="${recette.nom}" class="w-full h-40 object-cover rounded">
                     <h2 class="text-lg font-bold mt-2">${recette.nom}</h2>
                     <p class="text-sm text-gray-600">${recette.categorie} - ${recette.temps_preparation}</p>

@@ -4,3 +4,42 @@
     box-sizing: border-box;
     list-style: none;
 }
+
+.body{
+    background-color: #FFBE85;
+}
+
+.titre-h2{
+    font-size: 32px;
+}
+
+.container-recipes{
+    background-color: #FDE4CE;
+    width: 70%;
+    min-height:30rem;
+}
+
+.bg-img{
+    background-image: url(../img/img_acceuil.webp);
+    width: 70%;
+    height: 30rem;
+    background-position: center;
+    background-size: cover;
+}
+
+.how-to-container{
+    background-color: #FFF;
+    width: 70%;
+    margin: auto;
+    height: 30rem;
+}
+
+
+.how-to-item{
+    width: 30%;
+    height: 12rem;
+    margin: auto;
+    padding: 2rem;
+
+
+}

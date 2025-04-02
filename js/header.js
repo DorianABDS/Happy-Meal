@@ -1,14 +1,31 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const searchInputs = [
-        { input: document.getElementById("search-input-mobile"), list: document.getElementById("suggestions-list-mobile") },
-        { input: document.getElementById("search-input-desktop"), list: document.getElementById("suggestions-list-desktop") }
-    ];
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbarMenu = document.getElementById("navbar-menu");
+
+    if (menuToggle && navbarMenu) {
+        menuToggle.addEventListener("click", function () {
+            navbarMenu.classList.toggle("hidden");
+            navbarMenu.classList.toggle("absolute");
+            navbarMenu.classList.toggle("left-0");
+            navbarMenu.classList.toggle("top-full");
+            navbarMenu.classList.toggle("w-full");
+            navbarMenu.classList.toggle("bg-white");
+            navbarMenu.classList.toggle("shadow-lg");
+            navbarMenu.classList.toggle("p-4");
+            navbarMenu.classList.toggle("rounded-md");
+        });
+    }
 
     // Charger les recettes depuis data.json
     fetch("../data/data.json")
         .then(response => response.json())
         .then(data => {
             const recettes = data.recettes.map(recette => recette.nom); // Récupère uniquement les noms des recettes
+            
+            const searchInputs = [
+                { input: document.getElementById("search-input-mobile"), list: document.getElementById("suggestions-list-mobile") },
+                { input: document.getElementById("search-input-desktop"), list: document.getElementById("suggestions-list-desktop") }
+            ];
 
             searchInputs.forEach(({ input, list }) => {
                 let selectedIndex = -1; // Index pour navigation au clavier
@@ -74,18 +91,19 @@ function afficherRecetteSelectionnee(nomRecette, recettes) {
     if (!recetteSelectionnee) return;
 
     const recettesContainer = document.getElementById("recettes-container");
-    recettesContainer.innerHTML = `
-        <div>
-            <h2>${recetteSelectionnee.nom}</h2>
-            <h3>Liste d'ingrédients</h3>
-            <ul>
-                ${recetteSelectionnee.ingredients.map(ingredient => `<li>${ingredient.nom}</li>`).join('')}
-            </ul>
-            <h3>Étapes de préparation</h3>
-            <ul>
-                ${recetteSelectionnee.etapes.map(etape => `<li>${etape}</li>`).join('')}
-            </ul>
-        </div>
-    `;
+    if (recettesContainer) {
+        recettesContainer.innerHTML = `
+            <div>
+                <h2>${recetteSelectionnee.nom}</h2>
+                <h3>Liste d'ingrédients</h3>
+                <ul>
+                    ${recetteSelectionnee.ingredients.map(ingredient => `<li>${ingredient.nom}</li>`).join('')}
+                </ul>
+                <h3>Étapes de préparation</h3>
+                <ul>
+                    ${recetteSelectionnee.etapes.map(etape => `<li>${etape}</li>`).join('')}
+                </ul>
+            </div>
+        `;
+    }
 }
-

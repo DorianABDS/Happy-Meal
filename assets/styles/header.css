@@ -1,86 +1,90 @@
-.navbar{
+/* Styles généraux */
+.navbar {
     background-color: #FDE4CE;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
 .logo-navbar {
-    width:8rem;   
+    width: 8rem;
 }
 
-
-.input-group {
-    width: 300px !important;
-    max-width:300px; /* Limite la largeur totale */
+/* Bouton menu burger */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Caché en desktop */
 }
 
-/* AUTOCOMPLETION */
-
-.search-container {
-    position: relative;
+/* Menu desktop */
+.navbar-menu {
     display: flex;
     align-items: center;
-    width: 100%;
 }
 
-.input-group-text {
-    cursor: pointer;
-}
-
-.autocomplete-list {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: white;
-    border: 1px solid #ccc;
+.menu-list {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    z-index: 1000;
-    max-height: 200px;
-    overflow-y: auto;
+    display: flex;
+    gap: 20px;
 }
 
-.suggestion-item {
-    padding: 8px;
-    cursor: pointer;
+.menu-list li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
 }
 
-.suggestion-item:hover {
-    background-color: #f0f0f0;
-}
-
-
-
-@media (max-width: 991px) { 
-    .logo-navbar {
-        width: 5rem; /* Plus petit sur mobile */
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Affiche le menu burger en mobile */
     }
 
-    .input-group {
-        width: 200px !important;
-        max-width:200px; /* Limite la largeur totale */
-    }
-    
-}
-@media (max-width: 768px) { 
-    .logo-navbar {
-        width: 5rem; /* Plus petit sur mobile */
-    }
-
-    .input-group {
-        width: 180px !important;
-        max-width:180px; /* Limite la largeur totale */
-    }
-    
-}
-@media (max-width: 576px) { 
-    .logo-navbar {
-        width: 4rem; /* Plus petit sur mobile */
+    .navbar-menu {
+        display: none; /* Caché par défaut */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        border-radius: 5px;
     }
 
-    .input-group {
-        width: 170px !important;
-        max-width:170px; /* Limite la largeur totale */
+    .navbar-menu.active {
+        display: block; /* Affiché quand le menu est activé */
     }
-    
+
+    .menu-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .menu-list li {
+        padding: 10px;
+    }
+
+    .menu-list li a {
+        display: block;
+        width: 100%;
+    }
+
+    /* Cache la barre de recherche dans le menu mobile */
+    .search-mobile {
+        display: none; 
+    }
 }

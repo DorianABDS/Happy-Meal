@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/header.css">
+    <link rel="stylesheet" href="../assets/styles/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <script src="./js/header.js" defer></script>
@@ -103,7 +104,25 @@
         </article>
     </section>    
 </main>
+<footer class="footer py-6 shadow-md mt-5">
+    <div class="container mx-auto">
+        <!-- Liens en ligne -->
+        <ul class="flex justify-around flex-wrap gap-4 pt-3">
+            <li><a href="./pages/recipePage.html" class="">Les recettes</a></li>
+            <li><a href="./pages/favouriteRecipe.html" class="">Mes favoris</a></li>
+            <li><a href="./pages/mealPlanningPage.html" class="">Mon planning</a></li>
+            <li><a href="./pages/ShoppingListPage.html" class="">Ma liste de courses</a></li>
+        </ul>
 
+        <!-- Logo centré en dessous -->
+        <div class="flex justify-center mt-4">
+            <img src="../assets/img/happy_meal_logo.webp" alt="logo Happy Meal" class="w-24 h-auto">
+        </div>
+
+        <!-- Copyright centré -->
+        <p class="text-center text-gray-500 mt-4">© 2025 - Web Workers.</p>
+    </div>
+</footer>
 </body>
 
 </html>

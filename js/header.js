@@ -1,8 +1,21 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const searchInputs = [
-        { input: document.getElementById("search-input-mobile"), list: document.getElementById("suggestions-list-mobile") },
-        { input: document.getElementById("search-input-desktop"), list: document.getElementById("suggestions-list-desktop") }
-    ];
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbarMenu = document.getElementById("navbar-menu");
+
+    // Fonction pour basculer l'affichage du menu mobile
+    if (menuToggle && navbarMenu) {
+        menuToggle.addEventListener("click", function () {
+            navbarMenu.classList.toggle("hidden");
+            navbarMenu.classList.toggle("absolute");
+            navbarMenu.classList.toggle("left-0");
+            navbarMenu.classList.toggle("top-full");
+            navbarMenu.classList.toggle("w-full");
+            navbarMenu.classList.toggle("bg-white");
+            navbarMenu.classList.toggle("shadow-lg");
+            navbarMenu.classList.toggle("p-4");
+            navbarMenu.classList.toggle("rounded-md");
+        });
+    }
 
     // Charger les recettes depuis data.json
     fetch("../data/data.json")
@@ -10,9 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             const recettes = data.recettes.map(recette => recette.nom); // Récupère uniquement les noms des recettes
 
-            searchInputs.forEach(({ input, list }) => {
-                let selectedIndex = -1; // Index pour navigation au clavier
+            // Définir les champs de recherche pour mobile et desktop
+            const searchInputs = [
+                { input: document.getElementById("search-input-mobile"), list: document.getElementById("suggestions-list-mobile") },
+                { input: document.getElementById("search-input-desktop"), list: document.getElementById("suggestions-list-desktop") }
+            ];
 
+            searchInputs.forEach(({ input, list }) => {
+                let selectedIndex = -1;
+
+                // Gestion de l'input dans la barre de recherche
                 input.addEventListener("input", () => {
                     const query = input.value.toLowerCase();
                     list.innerHTML = "";
@@ -27,20 +47,19 @@ document.addEventListener("DOMContentLoaded", () => {
                             const li = document.createElement("li");
                             li.textContent = suggestion;
                             li.classList.add("suggestion-item");
-                        
-                            // Ajoute un événement au clic pour afficher la recette sélectionnée
+
                             li.addEventListener("click", () => {
                                 input.value = suggestion;
                                 list.innerHTML = "";
                                 afficherRecetteSelectionnee(suggestion, data.recettes);
                             });
-                        
+
                             list.appendChild(li);
                         });
                     }
                 });
 
-                // Gérer la navigation clavier
+                // Gestion de la navigation au clavier (flèches et entrée)
                 input.addEventListener("keydown", (e) => {
                     const items = list.querySelectorAll(".suggestion-item");
 
@@ -59,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                 });
 
+                // Fermer la liste des suggestions si on clique ailleurs
                 document.addEventListener("click", (e) => {
                     if (!input.contains(e.target) && !list.contains(e.target)) {
                         list.innerHTML = "";
@@ -69,6 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Erreur de chargement des recettes :", error));
 });
 
+// Fonction pour afficher une recette sélectionnée
 function afficherRecetteSelectionnee(nomRecette, recettes) {
     const recetteSelectionnee = recettes.find(recette => recette.nom === nomRecette);
     if (!recetteSelectionnee) return;

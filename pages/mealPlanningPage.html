@@ -6,68 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planificateur de Repas</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles/header.css">
+    <link rel="stylesheet" href="/assets/styles/footer.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="mealPlanningPage.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+
 </head>
 
 <body class="p-6 bg-gray-100">
-    <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg p-6">
-        <h1 class="text-3xl font-bold text-center text-indigo-800 mb-6">Planificateur de Repas - Mes Favoris</h1>
+    <header>
 
-        <div class="overflow-x-auto">
-            <table class="w-full border-collapse">
-                <thead>
-                    <tr class="bg-indigo-600 text-white">
-                        <th class="p-3 text-center font-semibold border border-indigo-500">Jour</th>
-                        <th class="p-3 text-center font-semibold border border-indigo-500">Matin</th>
-                        <th class="p-3 text-center font-semibold border border-indigo-500">Midi</th>
-                        <th class="p-3 text-center font-semibold border border-indigo-500">Soir</th>
-                    </tr>
-                </thead>
-                <tbody id="menu-table">
-                </tbody>
-            </table>
+    </header>
+    <main>
+        <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg p-6">
+            <h1 class="text-3xl font-bold text-center text-indigo-800 mb-6">Planificateur de Repas - Mes Favoris</h1>
+
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-indigo-600 text-white">
+                            <th class="p-3 text-center font-semibold border border-indigo-500">Jour</th>
+                            <th class="p-3 text-center font-semibold border border-indigo-500">Matin</th>
+                            <th class="p-3 text-center font-semibold border border-indigo-500">Midi</th>
+                            <th class="p-3 text-center font-semibold border border-indigo-500">Soir</th>
+                        </tr>
+                    </thead>
+                    <tbody id="menu-table">
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-    <script>
-        $(document).ready(function () {
-            const days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
-            const categories = ["matin", "midi", "soir"];
-            let favoriteRecettes = {};
+        <script>
+            $(document).ready(function () {
+                const days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+                const categories = ["matin", "midi", "soir"];
+                let favoriteRecettes = {};
 
-            const favorisData = localStorage.getItem('favoris');
+                const favorisData = localStorage.getItem('favoris');
 
-            if (favorisData) {
-                favoriteRecettes = JSON.parse(favorisData);
-                generateTable();
-            } else {
-                console.log("Aucune donnée dans localStorage.");
-                $("#menu-table").html("<tr><td colspan='4' class='text-center text-red-500 p-3'>Aucune recette trouvée dans les favoris.</td></tr>");
-            }
+                if (favorisData) {
+                    favoriteRecettes = JSON.parse(favorisData);
+                    generateTable();
+                } else {
+                    console.log("Aucune donnée dans localStorage.");
+                    $("#menu-table").html("<tr><td colspan='4' class='text-center text-red-500 p-3'>Aucune recette trouvée dans les favoris.</td></tr>");
+                }
 
-            function generateTable() {
-                days.forEach(jour => {
-                    const row = $('<tr></tr>');
-                    row.append(`<td class="p-3 text-left border border-indigo-500">${jour}</td>`);
-                    
-                    categories.forEach(cat => {
-                        const select = $('<select class="p-2 border border-indigo-500 rounded"></select>');
-                        select.append("<option value=''>Sélectionner un repas</option>");
-                        
-                        if (favoriteRecettes[cat]) {
-                            favoriteRecettes[cat].forEach(recette => {
-                                select.append(`<option value='${recette.id}'>${recette.nom}</option>`);
-                            });
-                        }
-                        
-                        row.append(`<td class="p-3 text-center border border-indigo-500"></td>`).find('td:last-child').append(select);
+                function generateTable() {
+                    days.forEach(jour => {
+                        const row = $('<tr></tr>');
+                        row.append(`<td class="p-3 text-left border border-indigo-500">${jour}</td>`);
+
+                        categories.forEach(cat => {
+                            const select = $('<select class="p-2 border border-indigo-500 rounded"></select>');
+                            select.append("<option value=''>Sélectionner un repas</option>");
+
+                            if (favoriteRecettes[cat]) {
+                                favoriteRecettes[cat].forEach(recette => {
+                                    select.append(`<option value='${recette.id}'>${recette.nom}</option>`);
+                                });
+                            }
+
+                            row.append(`<td class="p-3 text-center border border-indigo-500"></td>`).find('td:last-child').append(select);
+                        });
+
+                        $("#menu-table").append(row);
                     });
-                    
-                    $("#menu-table").append(row);
-                });
-            }
-        });
-    </script>
+                }
+            });
+        </script>
+    </main>
+    <footer>
+        
+    </footer>
 </body>
 
 </html>

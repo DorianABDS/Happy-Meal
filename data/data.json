@@ -4,7 +4,7 @@
          "nom": "Poulet rôti aux herbes",
          "categorie": "Plat principal",
          "temps_preparation": "1 heure",
-         "image": "./assets/img/poulet_roti.jpg",
+         "image": "../assets/img/poulet_roti.jpg",
          "ingredients": [
             {
                "nom": "Poulet",
@@ -35,7 +35,7 @@
          "nom": "Salade de quinoa aux légumes grillés",
          "categorie": "Entrée",
          "temps_preparation": "30 minutes",
-         "image": "./assets/img/salade_quinoa.jpg",
+         "image": "../assets/img/salade_quinoa.jpg",
          "ingredients": [
             {
                "nom": "quinoa",
@@ -74,7 +74,7 @@
          "nom": "Tarte aux pommes",
          "categorie": "Dessert",
          "temps_preparation": "1 heure",
-         "image": "./assets/img/tarte_pomme.jpg",
+         "image": "../assets/img/tarte_pomme.jpg",
          "ingredients": [
             {
                "nom": "Pâte brisée",
@@ -115,7 +115,7 @@
          "nom": "Soupe de lentilles",
          "categorie": "Entrée",
          "temps_preparation": "1 heure",
-         "image": "./assets/img/soupe_lentille.jpg",
+         "image": "../assets/img/soupe_lentille.jpg",
          "ingredients": [
             {
                "nom": "Lentille",
@@ -156,7 +156,7 @@
          "nom": "Pâtes Carbonara",
          "categorie": "Plat principal",
          "temps_preparation": "20 minutes",
-         "image": "./assets/img/pates_carbo.jpg",         
+         "image": "../assets/img/pates_carbo.jpg",         
          "ingredients": [
             {
                "nom": "Pates",
@@ -199,7 +199,7 @@
          "nom": "Ratatouille provençale",
          "categorie": "Plat principal",
          "temps_preparation": "1 heure",
-         "image": "./assets/img/ratatouille.jpg",
+         "image": "../assets/img/ratatouille.jpg",
          "ingredients": [
             {
                "nom": "Aubergine",
@@ -241,7 +241,7 @@
          "nom": "Salade César",
          "categorie": "Entrée",
          "temps_preparation": "20 minutes",
-         "image": "./assets/img/salade_cesar.jpg",
+         "image": "../assets/img/salade_cesar.jpg",
          "ingredients": [
             {
                "nom": "Laitue",
@@ -281,7 +281,7 @@
          "nom": "Risotto aux champignons",
          "categorie": "Plat principal",
          "temps_preparation": "40 minutes",
-         "image": "./assets/img/risotto_champi.jpg",
+         "image": "../assets/img/risotto_champi.jpg",
          "ingredients": [
             {
                "nom": "Riz",
@@ -325,7 +325,7 @@
          "nom": "Muffins aux myrtilles",
          "categorie": "Dessert",
          "temps_preparation": "30 minutes",
-         "image": "./assets/img/muffin_myrtille.jpg",
+         "image": "../assets/img/muffin_myrtille.jpg",
          "ingredients": [
             {
                "nom": "Farine",
@@ -367,7 +367,7 @@
          "nom": "Lasagnes végétariennes",
          "categorie": "Plat principal",
          "temps_preparation": "1 heure 30 minutes",
-         "image": "./assets/img/lasagnes.jpg",
+         "image": "../assets/img/lasagnes.jpg",
          "ingredients": [
             {
                "nom": "Pâte",
@@ -410,7 +410,7 @@
          "nom": "Salade niçoise",
          "categorie": "Entrée",
          "temps_preparation": "20 minutes",
-         "image": "./assets/img/salade_nicoise.jpg",
+         "image": "../assets/img/salade_nicoise.jpg",
          "ingredients": [
             {
                "nom": "Laitue",
@@ -454,7 +454,7 @@
          "nom": "Tiramisu",
          "categorie": "Dessert",
          "temps_preparation": "30 minutes (+ temps de repos)",
-         "image": "./assets/img/tiramisu.jpg",
+         "image": "../assets/img/tiramisu.jpg",
          "ingredients": [
             {
                "nom": "Mascarpone",
@@ -498,7 +498,7 @@
          "nom": "Omelette aux champignons",
          "categorie": "Plat principal",
          "temps_preparation": "15 minutes",
-         "image": "./assets/img/omelette_champi.jpg",
+         "image": "../assets/img/omelette_champi.jpg",
          "ingredients": [
             {
                "nom": "Œufs",
@@ -533,7 +533,7 @@
          "nom": "Smoothie banane-fraise",
          "categorie": "Boisson",
          "temps_preparation": "5 minutes",
-         "image": "./assets/img/smoothie_banane.jpg",
+         "image": "../assets/img/smoothie_banane.jpg",
          "ingredients": [
             {
                "nom": "Banane",
@@ -563,7 +563,7 @@
          "nom": "Gâteau au chocolat fondant",
          "categorie": "Dessert",
          "temps_preparation": "40 minutes",
-         "image": "./assets/img/gateau_choco.jpg",
+         "image": "../assets/img/gateau_choco.jpg",
          "ingredients": [
             {
                "nom": "Chocolat noir",
@@ -599,7 +599,7 @@
          "nom": "Velouté de potiron",
          "categorie": "Entrée",
          "temps_preparation": "40 minutes",
-         "image": "./assets/img/veloute_potiron.jpg",
+         "image": "../assets/img/veloute_potiron.jpg",
          "ingredients": [
             {
                "nom": "Potiron",
@@ -634,7 +634,7 @@
          "nom": "Bruschetta à la tomate et au basilic",
          "categorie": "Entrée",
          "temps_preparation": "15 minutes",
-         "image": "./assets/img/bruschetta.jpg",
+         "image": "../assets/img/bruschetta.jpg",
          "ingredients": [
             {
                "nom": "Pain",
@@ -672,7 +672,7 @@
          "nom": "Salade de chèvre chaud",
          "categorie": "Entrée",
          "temps_preparation": "20 minutes",
-         "image": "./assets/img/salade_chevre.jpg",
+         "image": "../assets/img/salade_chevre.jpg",
          "ingredients": [
             {
                "nom": "Salade verte",
@@ -705,7 +705,7 @@
          "nom": "Blanquette de veau",
          "categorie": "Plat principal",
          "temps_preparation": "2 heures",
-         "image": "./assets/img/blanquette.jpg",
+         "image": "../assets/img/blanquette.jpg",
          "ingredients": [
             {
                "nom": "Veau",
@@ -738,7 +738,7 @@
          "nom": "Tajine d'agneau aux pruneaux",
          "categorie": "Plat principal",
          "temps_preparation": "1 heure 30 minutes",
-         "image": "./assets/img/tajine_agneau.jpg",
+         "image": "../assets/img/tajine_agneau.jpg",
          "ingredients": [
             {
                "nom": "Agneau",
@@ -776,7 +776,7 @@
          "nom": "Tarte citron meringuée",
          "categorie": "Dessert",
          "temps_preparation": "1 heure",
-         "image": "./assets/img/tarte_citron.jpg",
+         "image": "../assets/img/tarte_citron.jpg",
          "ingredients": [
             {
                "nom": "Pâte sablée",
@@ -810,7 +810,7 @@
          "nom": "Mousse au chocolat",
          "categorie": "Dessert",
          "temps_preparation": "30 minutes",
-         "image": "./assets/img/mousse_choco.jpg",
+         "image": "../assets/img/mousse_choco.jpg",
          "ingredients": [
             {
                "nom": "Chocolat noir",
@@ -840,7 +840,7 @@
          "nom": "Carpaccio de tomates et mozzarella",
          "categorie": "Entrée",
          "temps_preparation": "10 minutes",
-         "image": "./assets/img/carpaccio_tomate.jpg",
+         "image": "../assets/img/carpaccio_tomate.jpg",
          "ingredients": [
             {
                "nom": "Tomates",
@@ -874,7 +874,7 @@
          "nom": "Œufs mimosa",
          "categorie": "Entrée",
          "temps_preparation": "15 minutes",
-         "image": "./assets/img/oeuf_mimosa.jpg",
+         "image": "../assets/img/oeuf_mimosa.jpg",
          "ingredients": [
             {
                "nom": "Œufs",
@@ -903,7 +903,7 @@
          "nom": "Spaghetti aux fruits de mer",
          "categorie": "Plat principal",
          "temps_preparation": "30 minutes",
-         "image": "./assets/img/spaghetti_fruit.jpg",
+         "image": "../assets/img/spaghetti_fruit.jpg",
          "ingredients": [
             {
                "nom": "Spaghetti",
@@ -938,7 +938,7 @@
          "nom": "Filet mignon de porc à la moutarde",
          "categorie": "Plat principal",
          "temps_preparation": "45 minutes",
-         "image": "./assets/img/filet_mignon.jpg",
+         "image": "../assets/img/filet_mignon.jpg",
          "ingredients": [
             {
                "nom": "Filet mignon de porc",
@@ -968,7 +968,7 @@
          "nom": "Moelleux aux amandes",
          "categorie": "Dessert",
          "temps_preparation": "30 minutes",
-         "image": "./assets/img/moelleux_amande.jpg",
+         "image": "../assets/img/moelleux_amande.jpg",
          "ingredients": [
             {
                "nom": "Poudre d'amande",

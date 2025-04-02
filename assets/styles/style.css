@@ -25,13 +25,13 @@
 
 .container-recipes{
     background-color: #FDE4CE;
-    width: 70%;
+    width: 80%;
     min-height:25rem;
 }
 
 .bg-img{
     background-image: url(../img/img_acceuil.webp);
-    width: 70%;
+    width: 80%;
     height: 30rem;
     background-position: center;
     background-size: cover;
@@ -39,8 +39,8 @@
 
 .how-to-container{
     background-color: #FFF;
-    width: 70%;
-    height: 20rem;
+    width: 80%;
+    min-height: 20rem;
     margin: auto;
 }
 

@@ -1,11 +1,11 @@
 /* Styles généraux */
 .navbar {
-    background-color: #FDE4CE;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    z-index: 1000;  
 }
 
 /* Logo */

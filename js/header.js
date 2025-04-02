@@ -1,22 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menu-toggle");
-    const navbarMenu = document.getElementById("navbar-menu");
-
-    // Fonction pour basculer l'affichage du menu mobile
-    if (menuToggle && navbarMenu) {
-        menuToggle.addEventListener("click", function () {
-            navbarMenu.classList.toggle("hidden");
-            navbarMenu.classList.toggle("absolute");
-            navbarMenu.classList.toggle("left-0");
-            navbarMenu.classList.toggle("top-full");
-            navbarMenu.classList.toggle("w-full");
-            navbarMenu.classList.toggle("bg-white");
-            navbarMenu.classList.toggle("shadow-lg");
-            navbarMenu.classList.toggle("p-4");
-            navbarMenu.classList.toggle("rounded-md");
-        });
-    }
-
     // Charger les recettes depuis data.json
     fetch("../data/data.json")
         .then(response => response.json())
@@ -87,6 +69,22 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         })
         .catch(error => console.error("Erreur de chargement des recettes :", error));
+
+    // Fonction pour inclure le header
+    function includeHeader() {
+        fetch('../components/header.html')  // Le chemin vers ton fichier header.html
+            .then(response => response.text())  // Convertir la réponse en texte (HTML)
+            .then(data => {
+                // Insérer le contenu dans l'élément <header> sans effacer le reste de la page
+                const headerElement = document.querySelector('header');
+                headerElement.innerHTML = data;
+                initializeMenuBurger();  // Initialise le menu burger après avoir chargé le header
+            })
+            .catch(err => console.error('Erreur lors du chargement du header:', err));
+    }
+
+    // Charger le header après le chargement initial
+    includeHeader();
 });
 
 // Fonction pour afficher une recette sélectionnée
@@ -110,15 +108,17 @@ function afficherRecetteSelectionnee(nomRecette, recettes) {
     `;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    function includeHeader() {
-        fetch('../components/header.html')  // Charger le fichier header.html
-            .then(response => response.text())  // Convertir la réponse en texte (HTML)
-            .then(data => {
-                document.querySelector('header').innerHTML = data; // Insérer le contenu dans la balise header
-            })
-            .catch(err => console.error('Erreur lors du chargement du header:', err));
-    }
+function initializeMenuBurger() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbarMenu = document.getElementById("navbar-menu");
 
-    includeHeader();  // Appeler la fonction pour charger le header
-});
+    // Vérifier si les éléments existent dans le DOM
+    if (menuToggle && navbarMenu) {
+        menuToggle.addEventListener("click", function () {
+            navbarMenu.classList.toggle("hidden"); // Toggle the visibility of the mobile menu
+            navbarMenu.classList.toggle("block"); // Show the menu as a block under the navbar
+        });
+    } else {
+        console.error("Le menuToggle ou navbarMenu n'a pas été trouvé dans le DOM.");
+    }
+}

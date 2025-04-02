@@ -5,31 +5,56 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Happy Meal</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/assets/styles/style.css">
-    <link rel="stylesheet" href="/assets/styles/reset.css">
+    
+    <!-- Intégration de TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Styles et Scripts -->
+    <link rel="stylesheet" href="../assets/styles/reset.css">
+    <link rel="stylesheet" href="../assets/styles/footer.css">
+    <link rel="stylesheet" href="../assets/styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Scripts personnalisés -->
+    <script src="../js/recipePage.js" defer></script>
+    <script src="../js/header.js" defer></script>
+    <script src="../js/footer.js" defer></script>
 </head>
 
-<body class="bg-gray-100 p-6">
-    <div class="container mx-auto">
-        <h1 class="text-3xl font-bold text-center mb-6">Liste des recettes</h1>
-        <div id="recipesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div id="recettes"></div>
-            <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center">
-                <div class="bg-white p-6 rounded-lg shadow-lg w-3/4 max-w-lg">
-                    <h2 id="modal-title" class="text-2xl font-bold mb-4"></h2>
-                    <h3 class="text-xl font-semibold">Liste des ingrédients</h3>
-                    <ul id="modal-ingredients" class="list-disc pl-5 mb-4"></ul>
-                    <h3 class="text-xl font-semibold">Étapes de préparation</h3>
-                    <ul id="modal-etapes" class="list-decimal pl-5 mb-4"></ul>
-                    <button id="close-modal" class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Fermer</button>
-                </div>
-            </div>
+<body class="bg-orange-300">
+
+    <header class="mb-5">
+        
+    </header>
+
+    <div id="recipesContainer" class="container mx-auto max-w-7xl p-6 bg-orange-200 rounded">
+    <h1 class="text-3xl font-bold text-center mb-6">Les Recettes</h1>
+
+    <!-- Grille des recettes -->
+    <div id="recettes" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center"></div>
+    </div>
+    <!-- Modal pour afficher les détails de la recette -->
+    <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-3/4 max-w-lg">
+            <h2 id="modal-title" class="text-2xl font-bold mb-4"></h2>
+            <h3 class="text-xl font-semibold">Liste des ingrédients</h3>
+            <ul id="modal-ingredients" class="list-disc pl-5 mb-4"></ul>
+            <h3 class="text-xl font-semibold">Étapes de préparation</h3>
+            <ul id="modal-etapes" class="list-decimal pl-5 mb-4"></ul>
+            <button id="close-modal" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded">Fermer</button>
         </div>
     </div>
-    <script src="/js/display-json.js"></script>
-</body>
+<!-- Pagination -->
+    <div class="flex justify-center mt-6">
+        <div id="pagination" class="flex space-x-2"></div>
+    </div>
 
+
+<footer class="footer mt-5">
+</footer>
+
+</body>
 </html>

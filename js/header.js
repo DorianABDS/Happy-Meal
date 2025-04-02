@@ -110,3 +110,15 @@ function afficherRecetteSelectionnee(nomRecette, recettes) {
     `;
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    function includeHeader() {
+        fetch('../components/header.html')  // Charger le fichier header.html
+            .then(response => response.text())  // Convertir la réponse en texte (HTML)
+            .then(data => {
+                document.querySelector('header').innerHTML = data; // Insérer le contenu dans la balise header
+            })
+            .catch(err => console.error('Erreur lors du chargement du header:', err));
+    }
+
+    includeHeader();  // Appeler la fonction pour charger le header
+});

@@ -9,6 +9,16 @@
     background-color: #FFBE85;
 }
 
+
+.titre-h1{
+    color: #FBCD20;
+    text-shadow: #6B221B 2px 4px 2px;
+    font-size: 64px;
+    font-family: "Fredoka";
+    letter-spacing: -5px;
+    margin: 2rem;
+}
+
 .titre-h2{
     font-size: 32px;
 }
@@ -16,7 +26,7 @@
 .container-recipes{
     background-color: #FDE4CE;
     width: 70%;
-    min-height:30rem;
+    min-height:25rem;
 }
 
 .bg-img{
@@ -30,10 +40,13 @@
 .how-to-container{
     background-color: #FFF;
     width: 70%;
+    height: 20rem;
     margin: auto;
-    height: 30rem;
 }
 
+.article{
+    margin-top: 2rem;
+}
 
 .how-to-item{
     width: 30%;
@@ -43,3 +56,4 @@
 
 
 }
+

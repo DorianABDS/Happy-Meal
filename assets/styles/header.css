@@ -45,6 +45,27 @@
     font-size: 16px;
 }
 
+#suggestions-list-desktop, #suggestions-list-mobile {
+    border: 1px solid #ccc;
+    border-top: none;
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background: white;
+    z-index: 1000;
+    display: none;
+}
+
+#suggestions-list-desktop li, #suggestions-list-mobile li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#suggestions-list-desktop li:hover, #suggestions-list-mobile li:hover {
+    background-color: #f1f1f1;
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
     .menu-toggle {

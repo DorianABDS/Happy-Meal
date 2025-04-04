@@ -1,18 +1,16 @@
 $(document).ready(function () {
-    let recettes = []; // Tableau pour stocker toutes les recettes
-    let recettesParPage = 9; // Nombre de recettes affichées par page
-    let pageActuelle = 1; // Page en cours
+    let recettes = []; 
+    let recettesParPage = 9; 
+    let pageActuelle = 1; 
 
-    function afficherRecettes() {
-        $("#recettes").empty(); // Effacer les anciennes recettes
+    function afficherRecettes(recettesAffichees = recettes) {
+        $("#recettes").empty(); 
 
-        // Déterminer les recettes à afficher pour la page actuelle
         let debut = (pageActuelle - 1) * recettesParPage;
         let fin = debut + recettesParPage;
-        let recettesAffichees = recettes.slice(debut, fin);
+        let recettesPaginees = recettesAffichees.slice(debut, fin);
 
-        // Générer le HTML pour chaque recette
-        recettesAffichees.forEach(function (recette) {
+        recettesPaginees.forEach(function (recette) {
             let recetteHTML = `
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
                     <img src="${recette.image}" alt="${recette.nom}" class="w-full h-48 object-cover">
@@ -27,7 +25,7 @@ $(document).ready(function () {
             recetteElement.click(function () {
                 $("#modal-title").text(recette.nom);
                 $("#modal-ingredients").html(
-                    recette.ingredients.map(ingredient => `<li>${ingredient.nom} - ${ingredient.quantite}</li>`).join('')
+                    recette.ingredients.map(ing => `<li>${ing.nom} - ${ing.quantite}</li>`).join('')
                 );
                 $("#modal-etapes").html(
                     recette.etapes.map(etape => `<li>${etape}</li>`).join('')
@@ -38,62 +36,102 @@ $(document).ready(function () {
             $('#recettes').append(recetteElement);
         });
 
-        afficherPagination(); // Mettre à jour les boutons de pagination
+        afficherPagination(recettesAffichees); 
     }
 
-    function afficherPagination() {
-        let totalPages = Math.ceil(recettes.length / recettesParPage);
-        $("#pagination").empty(); // Vider la pagination existante
+    function afficherPagination(recettesAffichees = recettes) {
+        let totalPages = Math.ceil(recettesAffichees.length / recettesParPage);
+        $("#pagination").empty(); 
 
-        // Bouton "Précédent"
         if (pageActuelle > 1) {
             $("#pagination").append(`<button id="prev" class="bg-orange-100 px-2 py-1 rounded-md mr-2">Précédent</button>`);
         }
 
-        // Numéros de page
         for (let i = 1; i <= totalPages; i++) {
             let activeClass = i === pageActuelle ? "bg-orange-400 text-white" : "bg-orange-100";
             $("#pagination").append(`<button class="page-btn ${activeClass} px-2 py-1 rounded-md mx-1" data-page="${i}">${i}</button>`);
         }
 
-        // Bouton "Suivant"
         if (pageActuelle < totalPages) {
             $("#pagination").append(`<button id="next" class="bg-orange-100 px-2 py-1 rounded-md ml-2">Suivant</button>`);
         }
 
-        // Événements de clic sur les boutons
         $(".page-btn").click(function () {
             pageActuelle = parseInt($(this).attr("data-page"));
-            afficherRecettes();
+            afficherRecettes(recettesAffichees);
         });
 
         $("#prev").click(function () {
             if (pageActuelle > 1) {
                 pageActuelle--;
-                afficherRecettes();
+                afficherRecettes(recettesAffichees);
             }
         });
 
         $("#next").click(function () {
             if (pageActuelle < totalPages) {
                 pageActuelle++;
-                afficherRecettes();
+                afficherRecettes(recettesAffichees);
             }
         });
     }
 
-    // Récupérer les données JSON et initialiser les recettes
+    // 🔍 Gestion de la recherche
+    function filtrerRecettes(searchTerm) {
+        const recettesFiltrees = recettes.filter(recette =>
+            recette.nom.toLowerCase().includes(searchTerm) ||
+            recette.categorie.toLowerCase().includes(searchTerm) ||
+            recette.ingredients.some(ing => ing.nom.toLowerCase().includes(searchTerm))
+        );
+
+        pageActuelle = 1; 
+        afficherRecettes(recettesFiltrees);
+        afficherSuggestions(searchTerm);
+    }
+
+    // 🔠 Autocomplétion
+    function afficherSuggestions(searchTerm) {
+        const suggestionsList = $("#suggestions-list-desktop, #suggestions-list-mobile");
+        
+        if (!searchTerm || searchTerm.length < 2) {
+            suggestionsList.empty().addClass("hidden");
+            return;
+        }
+
+        const suggestions = recettes
+            .map(recette => recette.nom)
+            .filter(nom => nom.toLowerCase().includes(searchTerm))
+            .slice(0, 5);
+
+        suggestionsList.html(
+            suggestions.map(sug => `<li class="px-4 py-2 cursor-pointer hover:bg-gray-200">${sug}</li>`).join("")
+        ).removeClass("hidden");
+
+        suggestionsList.find("li").click(function () {
+            const selected = $(this).text();
+            $("#search-input-desktop, #search-input-mobile").val(selected);
+            suggestionsList.empty().addClass("hidden");
+            filtrerRecettes(selected.toLowerCase());
+        });
+    }
+
+    // 🔍 Événement sur la barre de recherche
+    $("#search-input-desktop, #search-input-mobile").on("input", function () {
+        let searchTerm = $(this).val().toLowerCase();
+        filtrerRecettes(searchTerm);
+    });
+
     $.ajax({
-        url: '/data/data.json',
-        type: 'GET',
-        dataType: 'json',
+        url: "/data/data.json",
+        type: "GET",
+        dataType: "json",
         success: function (data) {
             if (!data.recettes || data.recettes.length === 0) {
                 console.error("Aucune recette trouvée.");
                 return;
             }
             recettes = data.recettes;
-            afficherRecettes(); // Afficher la première page
+            afficherRecettes();
         },
         error: function (error) {
             console.error("Erreur lors du chargement des données :", error);

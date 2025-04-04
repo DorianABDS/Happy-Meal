@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Planning - Happy Meal</title>
-    
+
     <!-- Intégration de TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -31,29 +31,37 @@
                 <a href="../index.html" class="flex items-center">
                     <img src="../assets/img/happy_meal_logo.webp" alt="logo Happy Meal" class="logo-navbar">
                 </a>
-        
+
                 <!-- Barre de recherche en desktop -->
                 <div class="relative hidden lg:block w-64">
-                    <input id="search-input-desktop" class="w-full border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" type="search" placeholder="Rechercher..." aria-label="Search">
+                    <input id="search-input-desktop"
+                        class="w-full border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        type="search" placeholder="Rechercher..." aria-label="Search">
                     <span class="absolute right-3 top-2.5 text-gray-500"><i class="fas fa-search"></i></span>
-                    <ul id="suggestions-list-desktop" class="absolute top-full left-0 w-full bg-white shadow-md rounded-md mt-1 z-10 hidden"></ul>
+                    <ul id="suggestions-list-desktop"
+                        class="absolute top-full left-0 w-full bg-white shadow-md rounded-md mt-1 z-10 hidden"></ul>
                 </div>
-        
+
                 <!-- Barre de recherche en mobile -->
                 <div class="flex items-center lg:hidden relative w-full max-w-xs">
-                    <input id="search-input-mobile" class="w-full border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" type="search" placeholder="Rechercher..." aria-label="Search">
+                    <input id="search-input-mobile"
+                        class="w-full border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        type="search" placeholder="Rechercher..." aria-label="Search">
                     <span class="absolute right-3 top-2.5 text-gray-500"><i class="fas fa-search"></i></span>
-                    <ul id="suggestions-list-mobile" class="absolute top-full left-0 w-full bg-white shadow-md rounded-md mt-1 z-10 hidden"></ul>
+                    <ul id="suggestions-list-mobile"
+                        class="absolute top-full left-0 w-full bg-white shadow-md rounded-md mt-1 z-10 hidden"></ul>
                 </div>
-        
+
                 <!-- Bouton menu burger -->
-                <button class="lg:hidden text-gray-700 focus:outline-none" id="menu-toggle" aria-expanded="false" aria-controls="navbar-menu">
+                <button class="lg:hidden text-gray-700 focus:outline-none" id="menu-toggle" aria-expanded="false"
+                    aria-controls="navbar-menu">
 
                     <span class="text-2xl"><i class="fas fa-bars"></i></span>
                 </button>
-        
+
                 <!-- Menu mobile (caché par défaut) -->
-                <div id="navbar-menu" class="hidden absolute left-0 top-full w-full bg-orange-100 shadow-lg p-4 rounded-md transition-all duration-300 lg:flex lg:items-center lg:space-x-6 lg:static lg:w-auto lg:shadow-none lg:p-0">
+                <div id="navbar-menu"
+                    class="hidden absolute left-0 top-full w-full bg-orange-100 shadow-lg p-4 rounded-md transition-all duration-300 lg:flex lg:items-center lg:space-x-6 lg:static lg:w-auto lg:shadow-none lg:p-0">
                     <ul class="flex flex-col lg:flex-row lg:space-x-6">
                         <li><a href="../pages/recipePage.html">Les recettes</a></li>
                         <li><a href="../pages/favouriteRecipe.html">Mes favoris</a></li>
@@ -63,12 +71,8 @@
                 </div>
             </div>
         </nav>
-        
     </header>
-<body class="bg-gray-100">
-    <header>
 
-    </header>
     <main>
         <div class="max-w-6xl mx-auto m-10 bg-white rounded-lg shadow-lg p-6">
             <h1 class="text-3xl font-bold text-center text-black mb-6">Planificateur de Repas - Mes Favoris</h1>

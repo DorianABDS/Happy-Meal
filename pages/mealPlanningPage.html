@@ -4,9 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Happy Meal</title>
+    <title>Planning - Happy Meal</title>
+    
+    <!-- Intégration de TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Styles et Scripts -->
+    <link rel="stylesheet" href="../assets/styles/reset.css">
+    <link rel="stylesheet" href="../assets/styles/footer.css">
+    <link rel="stylesheet" href="../assets/styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/assets/styles/style.css">
+
+    <!-- Scripts personnalisés -->
+    <script src="../js/recipePage.js" defer></script>
+    <script src="../js/header.js" defer></script>
+    <script src="../js/footer.js" defer></script>
 </head>
 
 <body>
@@ -50,6 +65,72 @@
         </nav>
         
     </header>
+<body class="bg-gray-100">
+    <header>
+
+    </header>
+    <main>
+        <div class="max-w-6xl mx-auto m-10 bg-white rounded-lg shadow-lg p-6">
+            <h1 class="text-3xl font-bold text-center text-black mb-6">Planificateur de Repas - Mes Favoris</h1>
+
+            <div class="overflow-x-auto rounded-lg">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-orange-300 text-black">
+                            <th class="p-3 text-center font-semibold border border-orange-300">Jour</th>
+                            <th class="p-3 text-center font-semibold border border-orange-300">Matin</th>
+                            <th class="p-3 text-center font-semibold border border-orange-300">Midi</th>
+                            <th class="p-3 text-center font-semibold border border-orange-300">Soir</th>
+                        </tr>
+                    </thead>
+                    <tbody id="menu-table">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                const days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+                const categories = ["matin", "midi", "soir"];
+                let favoriteRecettes = {};
+
+                const favorisData = localStorage.getItem('favoris');
+
+                if (favorisData) {
+                    favoriteRecettes = JSON.parse(favorisData);
+                    generateTable();
+                } else {
+                    console.log("Aucune donnée dans localStorage.");
+                    $("#menu-table").html("<tr><td colspan='4' class='text-center text-red-500 p-3'>Aucune recette trouvée dans les favoris.</td></tr>");
+                }
+
+                function generateTable() {
+                    days.forEach(jour => {
+                        const row = $('<tr></tr>');
+                        row.append(`<td class="p-3 text-left border border-orange-300">${jour}</td>`);
+
+                        categories.forEach(cat => {
+                            const select = $('<select class="p-2 border border-orange-300 rounded"></select>');
+                            select.append("<option value=''>Sélectionner un repas</option>");
+
+                            if (favoriteRecettes[cat]) {
+                                favoriteRecettes[cat].forEach(recette => {
+                                    select.append(`<option value='${recette.id}'>${recette.nom}</option>`);
+                                });
+                            }
+
+                            row.append(`<td class="p-3 text-center border border-orange-300"></td>`).find('td:last-child').append(select);
+                        });
+
+                        $("#menu-table").append(row);
+                    });
+                }
+            });
+        </script>
+    </main>
+    <footer class="footer">
+
+    </footer>
 </body>
 
 </html>

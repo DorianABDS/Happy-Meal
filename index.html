@@ -66,6 +66,17 @@
                         <div id="recettes" class="flex flex-wrap justify-center items-center gap-6"></div>
                     </div>
                 </div>
+                <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center">
+                    <div class="bg-white p-6 rounded-lg shadow-lg w-3/4 max-w-lg">
+                        <h2 id="modal-title" class="text-2xl font-bold mb-4"></h2>
+                        <h3 class="text-xl font-semibold">Liste des ingrédients</h3>
+                        <ul id="modal-ingredients" class="list-disc pl-5 mb-4"></ul>
+                        <h3 class="text-xl font-semibold">Étapes de préparation</h3>
+                        <ul id="modal-etapes" class="list-decimal pl-5 mb-4"></ul>
+                        <button id="close-modal" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded">Fermer</button>
+                    </div>
+                </div>
+                  
             </article>
             <article class="article">
                 <div class="mx-auto rounded bg-cover bg-center bg-img"></div>

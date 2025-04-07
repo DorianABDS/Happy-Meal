@@ -1,5 +1,6 @@
 $(document).ready(function () {
     displayFavorites();
+    displayShoppingList(); // Afficher la liste des ingrédients dès le chargement
 });
 
 function displayFavorites() {
@@ -84,3 +85,55 @@ function openRecipeModal(recipe) {
 $("#close-modal").on("click", () => {
     $("#modal").addClass("hidden");
 });
+
+// Fonction pour récupérer la liste des ingrédients avec les quantités
+function getShoppingList() {
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    let shoppingList = [];
+
+    favorites.forEach(recipe => {
+        if (recipe && recipe.ingredients && Array.isArray(recipe.ingredients)) {
+            recipe.ingredients.forEach(ingredient => {
+                // Vérifie si l'ingrédient a une quantité et un nom
+                let ingredientName = ingredient.nom || ingredient;
+                let quantity = ingredient.quantite || 'Quantité non précisée';
+
+                // Ajouter l'ingrédient à la liste
+                shoppingList.push({ name: ingredientName, quantity: quantity });
+            });
+        }
+    });
+
+    // Supprimer les doublons tout en gardant les quantités
+    shoppingList = shoppingList.filter((value, index, self) =>
+        index === self.findIndex((t) => (
+            t.name === value.name
+        ))
+    );
+
+    return shoppingList;
+}
+
+// Fonction pour afficher la liste des ingrédients avec leurs quantités
+function displayShoppingList() {
+    let shoppingList = getShoppingList();
+    let container = $("#shopping-list");
+
+    container.html(""); // Nettoyer le conteneur
+
+    if (shoppingList.length === 0) {
+        container.append("<p class='text-center'>Aucun ingrédient ajouté.</p>");
+        return;
+    }
+
+    shoppingList.forEach(item => {
+        let ingredientDiv = document.createElement('div');
+        ingredientDiv.classList.add('bg-white', 'p-2', 'shadow-md', 'rounded-lg', 'my-2');
+
+        ingredientDiv.innerHTML = `
+            <p>${item.name} - <strong>${item.quantity}</strong></p>
+        `;
+
+        container.append(ingredientDiv);
+    });
+}

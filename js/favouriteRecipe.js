@@ -6,26 +6,29 @@ function displayFavorites() {
     let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
     let container = $("#favorites-list");
 
-    container.html(""); // Nettoyer le conteneur avant de réajouter les recettes
+    container.html(""); // Nettoyer le conteneur
 
     if (favorites.length === 0) {
-        container.append("<p>Aucune recette favorite.</p>");
+        container.append("<p class='text-center'>Aucune recette favorite.</p>");
         return;
     }
 
     favorites.forEach(recipe => {
+        // Ignorer les objets invalides
+        if (!recipe || !recipe.nom) return;
+
         let recipeDiv = document.createElement('div');
         recipeDiv.classList.add('bg-white', 'p-4', 'shadow-md', 'rounded-lg', 'cursor-pointer');
-        recipeDiv.setAttribute('data-id', recipe.id);
+        recipeDiv.setAttribute('data-nom', recipe.nom);
 
         recipeDiv.innerHTML = `
+            <img src="${recipe.image || 'placeholder.jpg'}" alt="${recipe.nom}" class="w-full h-48 object-cover rounded mb-2">
             <h3 class="text-xl font-bold">${recipe.nom}</h3>
-            <button class="bg-red-500 text-white px-4 py-2 rounded mt-2 remove-favorite" data-id="${recipe.id}">
+            <button class="bg-red-500 text-white px-4 py-2 rounded mt-2 remove-favorite" data-nom="${recipe.nom}">
                 Retirer des Favoris
             </button>
         `;
 
-        // Gestion du clic pour ouvrir le modal
         recipeDiv.addEventListener('click', function (event) {
             if (!event.target.classList.contains('remove-favorite')) {
                 console.log("Ouverture du modal pour :", recipe.nom);
@@ -36,34 +39,48 @@ function displayFavorites() {
         container.append(recipeDiv);
     });
 
-    // Nettoyage des anciens événements avant d'ajouter les nouveaux
-   $(".remove-favorite").off("click").on("click", function (event) {
-    event.stopPropagation();
-    let recipeId = $(this).data("id");
-    
-    console.log("ID récupéré :", recipeId); // ✅ Vérifie si l'ID est bien récupéré
+    // Gestion du bouton "Retirer des Favoris"
+    $(".remove-favorite").off("click").on("click", function (event) {
+        event.stopPropagation();
+        let recipeName = $(this).data("nom");
 
-    if (!recipeId) {
-        console.error("Erreur : l'ID est undefined !");
-        return; // On sort pour éviter l'erreur
-    }
+        console.log("Nom récupéré :", recipeName);
 
-    removeFavorite(recipeId);
-    displayFavorites(); // Mise à jour après suppression
-});
+        if (!recipeName) {
+            console.error("Erreur : le nom est undefined !");
+            return;
+        }
+
+        removeFavorite(recipeName);
+    });
 }
 
-function removeFavorite(recipeId) {
-    if (!recipeId) {
-        console.error("removeFavorite() : ID invalide !");
+function removeFavorite(recipeName) {
+    if (!recipeName) {
+        console.error("removeFavorite() : nom invalide !");
         return;
     }
 
     let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    
-    // Vérifie si les IDs sont bien comparés sous forme de chaînes
-    favorites = favorites.filter(recipe => recipe.id && recipe.id.toString() !== recipeId.toString());
+
+    console.log("Avant suppression :", favorites.map(r => r.nom));
+
+    favorites = favorites.filter(recipe => recipe.nom !== recipeName);
+
+    console.log("Après suppression :", favorites.map(r => r.nom));
 
     localStorage.setItem("favorites", JSON.stringify(favorites));
+    displayFavorites(); // Mise à jour immédiate
 }
 
+// Dummy modal handler for now
+function openRecipeModal(recipe) {
+    $("#modal-title").text(recipe.nom);
+    $("#modal-ingredients").html(recipe.ingredients?.map(i => `<li>${i}</li>`).join("") || "");
+    $("#modal-etapes").html(recipe.etapes?.map(e => `<li>${e}</li>`).join("") || "");
+    $("#modal").removeClass("hidden");
+}
+
+$("#close-modal").on("click", () => {
+    $("#modal").addClass("hidden");
+});

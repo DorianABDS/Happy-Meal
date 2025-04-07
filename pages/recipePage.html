@@ -5,44 +5,45 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Happy Meal</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/assets/styles/style.css">
-    <link rel="stylesheet" href="/assets/styles/reset.css">
+    
+    <!-- Intégration de TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Styles et Scripts -->
+    <link rel="stylesheet" href="../assets/styles/reset.css">
+    <link rel="stylesheet" href="../assets/styles/footer.css">
+    <link rel="stylesheet" href="../assets/styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Scripts personnalisés -->
+    <script src="../js/recipePage.js" defer></script>
+    <script src="../js/header.js" defer></script>
+    <script src="../js/footer.js" defer></script>
 </head>
 
 <body class="bg-gray-100 p-6">
-    <header>
-        <nav>
-            <ul>
-                <li><a href="favouriteRecipe.html">Favori</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="container mx-auto">
-            <h1 class="text-3xl font-bold text-center mb-6">Liste des recettes</h1>
-            <div id="recipesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div id="recettes"></div>
-                <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center">
-                    <div class="bg-white p-6 rounded-lg shadow-lg w-3/4 max-w-lg">
-                        <h2 id="modal-title" class="text-2xl font-bold mb-4"></h2>
-                        <h3 class="text-xl font-semibold">Liste des ingrédients</h3>
-                        <ul id="modal-ingredients" class="list-disc pl-5 mb-4"></ul>
-                        <h3 class="text-xl font-semibold">Étapes de préparation</h3>
-                        <ul id="modal-etapes" class="list-decimal pl-5 mb-4"></ul>
-                        <button id="modal-favorite" class="bg-blue-500 text-white px-4 py-2 rounded mt-2"
-                            onclick="addToFavorites(this)">Ajouter aux Favoris</button>
-                        <button id="close-modal" class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Fermer</button>
-                    </div>
-                    <div id="favorites"></div>
+    <div class="container mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-6">Liste des recettes</h1>
+        <div id="recipesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div id="recettes"></div>
+            <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center">
+                <div class="bg-white p-6 rounded-lg shadow-lg w-3/4 max-w-lg">
+                    <h2 id="modal-title" class="text-2xl font-bold mb-4"></h2>
+                    <h3 class="text-xl font-semibold">Liste des ingrédients</h3>
+                    <ul id="modal-ingredients" class="list-disc pl-5 mb-4"></ul>
+                    <h3 class="text-xl font-semibold">Étapes de préparation</h3>
+                    <ul id="modal-etapes" class="list-decimal pl-5 mb-4"></ul>
+                    <button id="close-modal" class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Fermer</button>
                 </div>
             </div>
         </div>
-    </main>
-
-    <script src="/js/recipePage.js"></script>
+    </div>
+    <script src="/js/display-json.js"></script>
 </body>
-
 </html>

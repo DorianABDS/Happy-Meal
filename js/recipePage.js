@@ -42,7 +42,7 @@ function displayRecipesByPage(page) {
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl cursor-pointer relative">
           <img src="${recipe.image}" alt="${recipe.nom}" class="w-full h-48 object-cover ">
             <h3 class="text-xl font-bold">${recipe.nom}</h3>
-            <button class="bg-blue-500 text-white center px-4 py-2 rounded mt-2 add-favorite" data-nom="${recipe.nom}">
+            <button class="bg-amber-400 text-white center px-4 py-2 rounded mt-2 add-favorite" data-nom="${recipe.nom}">
                 Ajouter aux Favoris
             </button>
         </div>

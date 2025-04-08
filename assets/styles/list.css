@@ -1,0 +1,36 @@
+/* Centrer et aligner l'input et l'ingrédient */
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Améliorer la visibilité de l'input */
+.quantity-input {
+    width: 100px;
+    margin-left: 10px; /* Ajouter un peu d'espace entre l'ingrédient et l'input */
+    padding: 5px;
+    background-color: #f0f0f0; /* Fond gris clair pour rendre l'input plus visible */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.ingredient-name {
+    flex-grow: 1;
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* Améliorer l'apparence des boutons de pagination */
+.pagination-button {
+    margin: 0 5px;
+}
+
+
+/* Styles pour les ingrédients si nécessaire */
+.bg-white {
+    background-color: #fff;
+}

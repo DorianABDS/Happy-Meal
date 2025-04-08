@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Happy Meal</title>
-    
+   
     <!-- Intégration de TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
 
     <!-- Styles et Scripts -->
     <link rel="stylesheet" href="assets/styles/style.css">
@@ -15,14 +17,18 @@
     <link rel="stylesheet" href="../assets/styles/reset.css">
     <link rel="stylesheet" href="../assets/styles/footer.css">
     <link rel="stylesheet" href="../assets/styles/header.css">
+    <link rel="stylesheet" href="../assets/styles/list.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
 
 <!-- Ajoute jsPDF à ton fichier HTML -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 
     <!-- Scripts personnalisés -->
    
@@ -33,6 +39,7 @@
     <script src="../js/jsPdf.js" defer></script>
 </head>
 
+
 <body class="bg-orange-300">
     <header class="mb-5">
         <nav class="navbar shadow-md bg-orange-100">
@@ -40,26 +47,26 @@
                 <a href="../index.html" class="flex items-center">
                     <img src="../assets/img/happy_meal_logo.webp" alt="logo Happy Meal" class="logo-navbar">
                 </a>
-        
+       
                 <!-- Barre de recherche en desktop -->
                 <div class="relative hidden lg:block w-64">
                     <input id="search-input-desktop" class="w-full border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" type="search" placeholder="Rechercher..." aria-label="Search">
                     <span class="absolute right-3 top-2.5 text-gray-500"><i class="fas fa-search"></i></span>
                     <ul id="suggestions-list-desktop" class="absolute top-full left-0 w-full bg-white shadow-md rounded-md mt-1 z-10 hidden"></ul>
                 </div>
-        
+       
                 <!-- Barre de recherche en mobile -->
                 <div class="flex items-center lg:hidden relative w-full max-w-xs">
                     <input id="search-input-mobile" class="w-full border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" type="search" placeholder="Rechercher..." aria-label="Search">
                     <span class="absolute right-3 top-2.5 text-gray-500"><i class="fas fa-search"></i></span>
                     <ul id="suggestions-list-mobile" class="absolute top-full left-0 w-full bg-white shadow-md rounded-md mt-1 z-10 hidden"></ul>
                 </div>
-        
+       
                 <!-- Bouton menu burger -->
                 <button class="lg:hidden text-gray-700 focus:outline-none" id="menu-toggle" aria-expanded="false" aria-controls="navbar-menu">
                     <span class="text-2xl"><i class="fas fa-bars"></i></span>
                 </button>
-        
+       
                 <!-- Menu mobile (caché par défaut) -->
                 <div id="navbar-menu" class="hidden absolute left-0 top-full w-full bg-orange-100 shadow-lg p-4 rounded-md transition-all duration-300 lg:flex lg:items-center lg:space-x-6 lg:static lg:w-auto lg:shadow-none lg:p-0">
                     <ul class="flex flex-col lg:flex-row lg:space-x-6">
@@ -74,10 +81,11 @@
     </header>
     <h1 class="text-3xl font-bold text-center mb-6">Ma Liste de Courses</h1>
 
+
     <div id="shopping-list" class="bg-white p-6 rounded-lg shadow-lg mb-6 max-w-4xl mx-auto">
         <ul class="list-disc pl-6 space-y-3 text-lg text-gray-800"> </ul>
     </div>
-    
+   
     <!-- Bouton pour télécharger le PDF -->
     <div class="flex justify-center">
         <button id="download-btn" class="bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-indigo-700 transition duration-200 ease-in-out transform hover:scale-105">
@@ -85,9 +93,12 @@
         </button>
     </div>
 
+
    
 
-    
+
+   
+
 
     <footer class="footer mt-5"></footer>
 </body>

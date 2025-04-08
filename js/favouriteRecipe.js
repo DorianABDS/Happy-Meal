@@ -36,7 +36,7 @@ function displayFavorites() {
         recipeDiv.addEventListener('click', function (event) {
             if (!event.target.classList.contains('remove-favorite')) {
                 console.log("Ouverture du modal pour :", recipe.nom);
-                openRecipeModal(recipe);  // Ouvre le modal pour afficher plus d'infos sur la recette
+                openRecipeModal(recipe);  // Vérifie que recipe contient les ingrédients
             }
         });
 
@@ -80,7 +80,7 @@ function removeFavorite(recipeName) {
 // Fonction pour ouvrir le modal et afficher les détails d'une recette
 function openRecipeModal(recipe) {
     $("#modal-title").text(recipe.nom);
-    $("#modal-ingredients").html(recipe.ingredients?.map(i => `<li>${i}</li>`).join("") || "");
+    $("#modal-ingredients").html(recipe.ingredients?.map(i => `<li>${i.nom} - ${i.quantite} ${i.unite || ''}</li>`).join("") || "");
     $("#modal-etapes").html(recipe.etapes?.map(e => `<li>${e}</li>`).join("") || "");
     $("#modal").removeClass("hidden");
 }
